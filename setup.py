@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from pkgutil import walk_packages
-from setuptools import setup
-
-
-def find_packages(path):
-    # This method returns packages and subpackages as well.
-    return [name for _, name, is_pkg in walk_packages([path]) if is_pkg]
+from setuptools import setup, find_packages
 
 
 def read_file(filename):
@@ -16,8 +11,8 @@ def read_file(filename):
 
 def read_rst(filename):
     # Ignore unsupported directives by pypi.
-    return ''.join(line for line in read_file(filename).splitlines()
-                   if not line.startswith('.. comment::'))
+    return '\n'.join(line for line in read_file(filename).splitlines()
+                     if not line.startswith('.. comment::'))
 
 
 def read_requirements(filename):
@@ -35,15 +30,16 @@ setup_attrs = dict(
     url='https://github.com/rolando/awesome-codename',
     packages=list(find_packages('src')),
     package_dir={'': 'src'},
-    setup_requires=read_requirements('requirements/setup.txt'),
+    package_data={'awesome_codename': ['data/*']},
+    entry_points={'console_scripts': ['awesome-codename = awesome_codename.__main__:main']},
     install_requires=read_requirements('requirements/install.txt'),
     include_package_data=True,
-    license="MIT",
+    license="AGPL",
     keywords='awesome-codename',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 2 - Beta',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: GNU Affero General Public License v3',
         'Natural Language :: English',
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.7',

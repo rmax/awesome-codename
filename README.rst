@@ -29,24 +29,44 @@ Awesome Codename
 
 Awesome Codename Generator
 
-* Free software: MIT license
+* Free software: AGPL v3 license
 * Documentation: https://awesome-codename.readthedocs.org.
 * Python versions: 2.7, 3.4+
 
 Features
 --------
 
-FIXME
+Generates awesome codenames :)
+
 
 Quickstart
 ----------
 
-FIXME
+You can use the ``generate_codename()`` function and pick your favorite::
+
+  >>> from awesome_codename import generate_codename
+  >>> generate_codename()
+  'abnormal keeper'
+  >>> generate_codename()
+  'altruistic supermodel'
+  >>> generate_codename()
+  'recovered image'
+
+Or run ``awesome-codename`` from the command line::
+
+  $ awesome-codename 3
+  square thermometer
+  best shaker
+  countywide fusion
+
 
 Credits
 -------
+
+All credits go to `SecureDrop`_ project for curating the list of adjectives and nouns.
 
 This package was created with Cookiecutter_ and the `rolando/cookiecutter-pypackage`_ project template.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`rolando/cookiecutter-pypackage`: https://github.com/rolando/cookiecutter-pypackage
+.. _SecureDrop: https://securedrop.org/

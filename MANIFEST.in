@@ -1,6 +1,7 @@
 graft docs
 graft requirements
 graft src
+graft src/awesome_codename/data
 graft tests
 
 include *.in

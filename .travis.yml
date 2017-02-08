@@ -65,15 +65,24 @@ notifications:
     on_sucess: never
     on_failure: always
 
-# FIXME: After you create the Github repo and add it to Travis, run the
-# travis_pypi_setup.py script to finish PyPI deployment setup. Then you can
-# remove the script travis_pypi_setup.py.
 deploy:
   provider: pypi
   distributions: "sdist bdist_wheel"
   user: darkrho
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: !!binary |
+      UVpwNHYrWE1xNnRxd3BzaVY0aENSRzVjTWhYWllYZWRFUkR5ZW90a053Nm1zdUZZNUJiVUZUYU9P
+      ZEZMNlRJSkxzMXE5Sm1vQ09kdWFTeWF4aU9IZXdwc0x3TEhvOHU2OWtPN0p5SFN2Zlc5WXFhYWdV
+      MGpYLzJaa3dZSFFHNVJlQ0Y5WXVPa2pNUStvWXZZZGpPRWFkdzR4NlVmRGdhbE1BSzdKcEFpVWx5
+      UTQwYnpNdTVGZDdXVFAvTkJPUEZqbXhxeHhYNDBHVkpCOVJGMEZJYTljK3VGV09GOG9ZRzBqRWE1
+      RHQzOEQ5YTFDdjRBT0lSYUpCMU5aMnR5M1VMMzZOSi9tNm5zeFJyL0d4MDZaSXZxSEEvU0RyR3Vu
+      OUJFb2srQWo0NE11UDV6RU1MLzM2UklrRkl4djVrOXFZcEFrSmh6UnZFSXgwaFhkRnhIWUZFNU5j
+      MkRnanpQOEkyVkNEWWJMVjY0aFFWdEp0aTFRQlFtaGY2aDlpL3lSUm5oRVg4YUt4cHdFZVdNbzU2
+      YzZkWTBBK2NhMldwWE1mV2Q2L3RJRnU0U2Z3dkZ3S3Y0L3pXZDNqN1MwUEx0YXR3bDlFemwvY1N2
+      Z201TjBHSE44bFpCRHFHVjZxSG1LaVBVNG1kZUxLSjJyb1crZlFFQ1A4OXFtYjI2anZsamtheFkr
+      bVpqbVpBOUphUjJqUThyekl5U0lpdVpNRk1BWHMwTEZFR2wyRjBMenJRK0w1Z3FJc1ZKd0NTNTVo
+      VDB1WFVhcTlrMkMwZGdWdnd6bGowSElvWER1VzVicVptekZOcVFTYTFweHNXaWRQMmlwcm1jbTRV
+      ZW1aaUpTWnlnUGtqMGF4S1ZDY29vT0s3K1ZDSGwycU9YRDc4ZzdtUURwUDZQL1ZBZGVEeXUyRHc9
   on:
     tags: true
     all_branches: true
